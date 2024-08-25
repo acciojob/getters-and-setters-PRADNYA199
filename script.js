@@ -11,7 +11,7 @@ class Person {
 }
 
 class Student extends Person {
-	onstructor(name, age, grade) {
+constructor(name, age, grade) {
         super(name, age); // Call the parent class constructor
         this.grade = grade;
     }
@@ -24,23 +24,6 @@ class Student extends Person {
         return `${super.introduce()} I am a student in grade ${this.grade}.`;
     }
 }
-
-class Teacher extends Person {
-	
-	constructor(name, age, subject) {
-        super(name, age); // Call the parent class constructor
-        this.subject = subject;
-    }
-
-    teach() {
-        return `${this.name} is teaching ${this.subject}.`;
-    }
-
-    introduce() {
-        return `${super.introduce()} I am a teacher of ${this.subject}.`;
-    }
-}
-
 // Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
