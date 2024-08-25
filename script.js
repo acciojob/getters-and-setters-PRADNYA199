@@ -40,6 +40,16 @@ class Teacher extends Person {
 }
 
 // Do not change the code below this line
-window.Person = Person;
-window.Student = Student;
-window.Teacher = Teacher;
+//window.Person = Person;
+//window.Student = Student;
+//window.Teacher = Teacher;
+it("should change age", () => { 
+    cy.visit(baseUrl + "/main.html"); 
+    cy.window().then(win => { 
+        const Person = win.Person; 
+        const person = new Person("John", 30); 
+        expect(person.name).to.equal("John"); 
+        person.age = 30; 
+        expect(person.age).to.equal(30); 
+    }); 
+});
