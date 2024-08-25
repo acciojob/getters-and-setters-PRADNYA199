@@ -24,7 +24,8 @@ constructor(name, age, grade) {
         return `${super.introduce()} I am a student in grade ${this.grade}.`;
     }
 }
-constructor(name, age, subject) {
+class Teacher extends Person {
+ constructor(name, age, subject) {
         super(name, age); // Call the parent class constructor
         this.subject = subject;
     }
@@ -37,6 +38,7 @@ constructor(name, age, subject) {
         return `${super.introduce()} I am a teacher of ${this.subject}.`;
     }
 }
+
 // Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
